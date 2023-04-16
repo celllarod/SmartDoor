@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".FormActivity">
+
+    <TextView
+        android:id="@+id/tx_ip"
+        style="@style/Subtitulo"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:labelFor="@+id/til_add_farmaco_name"
+        android:text="Nombre:"
+        app:layout_constraintBottom_toTopOf="@+id/til_ip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ip"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconDrawable="@drawable/ic_borrar"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toTopOf="@+id/tx_puerto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_ip"
+        app:startIconDrawable="@drawable/ic_text">
+
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="Introduzca la IP del servidor"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="#696767" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tx_puerto"
+        style="@style/Subtitulo"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:labelFor="@+id/til_add_farmaco_name"
+        android:text="Puerto:"
+        app:layout_constraintBottom_toTopOf="@+id/til_puerto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_ip" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_puerto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconDrawable="@drawable/ic_borrar"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toTopOf="@+id/tx_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_puerto"
+        app:startIconDrawable="@drawable/ic_text">
+
+        <EditText
+            android:id="@+id/et_puerto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="Introduzca el puerto de escucha del servidor"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="#696767" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tx_id"
+        style="@style/Subtitulo"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:labelFor="@+id/til_add_farmaco_name"
+        android:text="Identificación:"
+        app:layout_constraintBottom_toTopOf="@+id/til_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_puerto" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconDrawable="@drawable/ic_borrar"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toTopOf="@+id/bt_open4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_id"
+        app:startIconDrawable="@drawable/ic_text">
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="Introduzca un nombre que identifique a la puerta"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="#696767" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bt_open4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="Añadir"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
